@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 198 70" role="img" aria-label="DIN">
+  <rect width="99" height="70" fill="#0B4264"/>
+  <rect x="99" width="99" height="70" fill="#678DA2"/>
+  <rect x="16" y="9" width="67" height="4" fill="#fff"/>
+  <rect x="16" y="57" width="67" height="4" fill="#fff"/>
+  <text x="16" y="48.5" textLength="67" lengthAdjust="spacingAndGlyphs" fill="#fff" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="700" font-size="38">DIN</text>
+</svg>

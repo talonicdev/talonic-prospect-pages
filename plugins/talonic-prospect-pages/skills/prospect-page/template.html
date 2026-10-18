@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<!-- FILL: "Talonic × <Customer>" -->
+<title>Talonic × Acme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Void 2.0, light only: flat surfaces, hairline borders, square corners, one violet accent.
+   Do not restyle. Fill the copy, drop sections that do not apply, keep the order. */
+:root{
+  --bg:#FAFAF9; --surface:#FFFFFF; --border:rgba(20,20,30,.09); --border-strong:rgba(20,20,30,.2);
+  --fg:#1B1B1F; --fg-2:#5B5B64; --muted:#8E8E97; --accent:#6B43C9; --accent-tint:#EDE7F6;
+  --display:"Space Grotesk",ui-sans-serif,system-ui,sans-serif; --serif:"Instrument Serif",Georgia,serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--display);margin:0}
+.sheet{max-width:880px;margin:0 auto;padding-block:36px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;grid-template-columns:minmax(0,1fr);gap:36px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--border);padding-bottom:16px}
+.lockup{display:flex;align-items:center;gap:14px}.lockup img{height:26px;width:auto;display:block}.lockup .x{color:var(--muted);font-size:18px}
+.lockup b{font-weight:600;font-size:20px;letter-spacing:-.02em}
+.hdr-r{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.meta{font:12px/1.4 var(--mono);color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.dl{font:500 13px var(--display);color:var(--accent);background:var(--surface);border:1px solid var(--accent);padding:7px 12px;text-decoration:none}
+.dl:hover{background:var(--accent-tint)}.dl:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1{font-weight:500;font-size:clamp(30px,4.6vw,44px);line-height:1.08;letter-spacing:-.025em;margin:0 0 12px;text-wrap:balance}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent)}
+.lede{color:var(--fg-2);max-width:62ch;margin:0}
+.lede+.lede,.hunt+.lede{margin-top:14px}
+.hunt{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.hunt li{font:12.5px/1 var(--mono);color:var(--fg);border:1px solid var(--border-strong);background:var(--surface);padding:7px 10px}
+.hunt li.open{color:var(--accent);border-style:dashed;border-color:var(--accent)}
+h2{font:500 11px/1 var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 14px}
+.video{border:1px solid var(--border);background:var(--surface)}
+.video video,.video-still img{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.note{margin:14px 0 0;font:12px/1.5 var(--mono);color:var(--muted)}
+.cells{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--border);border:1px solid var(--border)}
+.cell{background:var(--surface);padding:16px;min-width:0}
+.cell b{display:block;font-weight:600}
+.cell .r{font:11px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.cell p{margin:8px 0 0;color:var(--fg-2);font-size:14px}
+@media (max-width:680px){.cells{grid-template-columns:minmax(0,1fr)}}
+/* Data flow: three columns joined by arrows; stacks on phones. */
+.flow{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr) 28px minmax(0,1fr);align-items:center;border:1px solid var(--border);background:var(--surface);padding:22px}
+.flow-col{display:grid;gap:10px;min-width:0}
+.flow-col>.k{font:11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.box{border:1px solid var(--border-strong);padding:12px 14px;background:var(--surface)}
+.box b{display:block;font-weight:600}.box span{display:block;font-size:13px;color:var(--fg-2)}
+.box.hub{background:var(--accent-tint);border-color:var(--accent);padding-block:22px}
+.box.hub i{display:block;margin-top:12px;font:normal 11px var(--mono);color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.box.dash{border-style:dashed}
+.arrow{height:2px;background:var(--accent);position:relative}
+.arrow::after{content:"";position:absolute;right:-1px;top:-4px;border-left:7px solid var(--accent);border-top:5px solid transparent;border-bottom:5px solid transparent}
+@media (max-width:680px){.flow{grid-template-columns:minmax(0,1fr)}.arrow{width:2px;height:22px;justify-self:center}.arrow::after{right:-4px;top:auto;bottom:-1px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid var(--accent);border-bottom:0}}
+.tl{list-style:none;margin:0;padding:0;border-left:1px solid var(--border-strong)}
+.tl li{position:relative;display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding:0 0 20px 22px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-5px;top:6px;width:9px;height:9px;background:var(--bg);border:1.5px solid var(--accent)}
+.tl li.key::before{background:var(--accent)}
+.when{font:12.5px/1.6 var(--mono);color:var(--accent)}
+.tl b{font-weight:600;display:block}.tl span{color:var(--fg-2);font-size:14px}
+@media (max-width:560px){.tl li{grid-template-columns:minmax(0,1fr);gap:2px}}
+.acc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1px;background:var(--border);border:1px solid var(--border)}
+.acc-col{background:var(--surface);padding:18px 20px;min-width:0}
+.acc-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.acc-h b{font-weight:600;font-size:16px}.acc-h span{font:11px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.acc ol{margin:0;padding-left:20px;color:var(--fg-2);font-size:14px}.acc li{margin:6px 0;padding-left:2px}.acc li b{color:var(--fg);font-weight:500}
+.acc li::marker{font:12px var(--mono);color:var(--accent)}
+.acc-n{margin:12px 0 0;font:12px/1.5 var(--mono);color:var(--muted)}
+.hdr{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}.hdr h2{margin:0}
+.budget{font:500 13px var(--mono);color:var(--accent)}
+.checks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}
+.checks li{position:relative;padding-left:22px;color:var(--fg-2);font-size:14px}
+.checks li::before{content:"";position:absolute;left:0;top:5px;width:10px;height:10px;border:1.5px solid var(--accent)}
+@media (max-width:620px){.checks{grid-template-columns:minmax(0,1fr)}}
+.proof{display:grid;gap:18px;border-top:1px solid var(--border);padding-top:22px}
+.din{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.din img{height:28px;width:auto;align-self:center}
+.din .v{font-family:var(--serif);font-style:italic;font-size:30px;line-height:1;color:var(--accent);letter-spacing:-.01em}
+.din .vl{font-size:14px;color:var(--fg-2)}.din .vl b{color:var(--fg);font-weight:500}
+.logos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-items:center;justify-items:center;gap:12px;padding-block:16px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.logos img{display:block;width:auto;max-width:100%;filter:grayscale(1) contrast(1.6) brightness(.55)}
+@media (max-width:620px){.logos{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:18px}}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;border-top:1px solid var(--border);padding-top:14px}
+.foot a{color:var(--accent);text-decoration:none}.foot a:hover,.foot a:focus-visible{text-decoration:underline}
+.foot .site{font:12px var(--mono);letter-spacing:.04em;text-transform:uppercase}
+@page{size:A4;margin:14mm 16mm}
+@media print{:root{--bg:#FFFFFF}body{background:#fff}.sheet{max-width:none;padding:0;gap:26px}section,.cells,.flow,.acc-col,.tl li,.proof{break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <header class="top">
+    <!-- FILL: customer logo saved in the work folder as customer-logo.png or .svg. No logo: replace the second <img> with <b>Customer</b>. -->
+    <span class="lockup"><img src="/logos/talonic-logo-nav.png" alt="Talonic"><span class="x">×</span><img src="customer-logo.png" alt="Acme"></span>
+    <span class="hdr-r"><span class="meta"><!-- FILL: pilot name -->Money Found pilot · Confidential</span><a class="dl" href="__PDF_URL__">Download PDF</a></span>
+  </header>
+
+  <section>
+    <!-- FILL: the prospect's problem as a question, in their words. Accent on the last phrase. -->
+    <h1>Where is Acme's revenue <em>slipping away?</em></h1>
+    <!-- FILL: the leakage the prospect described on the call, then that agents also look for what nobody has listed. -->
+    <p class="lede">Missed indexation. Hours worked but never billed. Costs never recharged. In one audit week, agents work through your contracts and billing data looking for all of it, and for patterns nobody has listed yet.</p>
+    <!-- FILL: one chip per leakage type from the call. Keep the dashed last chip. Never list overbilling. -->
+    <ul class="hunt" aria-label="What the agents look for">
+      <li>Missed indexation</li><li>Unbilled hours</li><li>Costs not recharged</li><li>Rates off contract</li><li>Duplicate or missing invoices</li><li class="open">What we haven't thought of yet</li>
+    </ul>
+    <!-- FILL: reassurance. Name only systems the prospect named. -->
+    <p class="lede">Every finding comes with the contract clause, the transaction and a recommended next action. Access is read-only and revocable, and nothing changes in your systems.</p>
+  </section>
+
+  <!-- video -->
+  <section class="video" aria-label="Walkthrough video">
+    <video src="__MEDIA__/walkthrough.mp4" poster="__MEDIA__/poster.jpg" controls playsinline preload="metadata"></video>
+  </section>
+  <!-- /video -->
+
+  <section>
+    <h2>What you receive</h2>
+    <!-- FILL: one card per reader, named after the people on the call. -->
+    <div class="cells">
+      <div class="cell"><span class="r">For the CFO</span><b>CFO summary</b><p>Verified value by leakage type, ranked by size and how recoverable it is</p></div>
+      <div class="cell"><span class="r">For finance</span><b>Action register</b><p>Client, project, amount, confidence, evidence and a suggested owner per finding</p></div>
+      <div class="cell"><span class="r">For operations</span><b>Control gaps + missing documents</b><p>Why each issue happened, plus a per-contract list of amendments we couldn't find, ready to add later</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How the data flows</h2>
+    <!-- FILL: left column = the prospect's systems (only ones they named), right column = what they receive. -->
+    <div class="flow" role="img" aria-label="Acme systems feed read-only into the Talonic pilot workspace, which produces the outputs on the right">
+      <div class="flow-col"><span class="k">Acme · read-only</span>
+        <div class="box"><b>ERP</b><span>Invoices, projects, hours, expenses</span></div>
+        <div class="box"><b>Contract system</b><span>Signed contracts and attachments</span></div>
+      </div>
+      <div class="arrow"></div>
+      <div class="flow-col"><span class="k">Talonic</span>
+        <div class="box hub"><b>Pilot workspace</b><span>Commercial terms linked to billing evidence, each value traced to its source</span><i>Agents run here</i></div>
+      </div>
+      <div class="arrow"></div>
+      <div class="flow-col"><span class="k">Acme receives</span>
+        <div class="box"><b>Evidence pack</b><span>Summary, action register, control gaps</span></div>
+        <div class="box dash"><b>Missing documents</b><span>Amendments to add later, per contract</span></div>
+        <div class="box"><b>Your choice</b><span>Keep the layer and query it, or delete pilot data</span></div>
+      </div>
+    </div>
+    <p class="note">Minimum data only. No HR, payroll or unrelated personal data. No write access and no changes to your systems.</p>
+  </section>
+
+  <section>
+    <h2>Timeline</h2>
+    <!-- FILL: real dates from the call. Mark the meetings with class="key". -->
+    <ol class="tl">
+      <li><span class="when">This week</span><div><b>Talonic builds the connectors</b><span>Ready before access is granted</span></div></li>
+      <li><span class="when">By Thu 22 Oct</span><div><b>NDA signed</b><span>Both sides</span></div></li>
+      <li class="key"><span class="when">Fri 23 Oct · 10:30</span><div><b>Alignment call</b><span>Agree scope and success criteria</span></div></li>
+      <li><span class="when">26 – 30 Oct</span><div><b>Access set up</b><span>Read-only access granted. Connectors go live.</span></div></li>
+      <li><span class="when">2 – 6 Nov</span><div><b>Audit week</b><span>Contract terms checked against invoices, hours and expenses</span></div></li>
+      <li class="key"><span class="when">Week of 9 Nov</span><div><b>Findings readout</b><span>Evidence pack walkthrough. You decide what happens to the data.</span></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Exactly what we need for read access</h2>
+    <!-- FILL: one column per system the prospect named, with the owner from the call. Use references/access.md; never guess menu paths. -->
+    <div class="acc">
+      <div class="acc-col">
+        <div class="acc-h"><b>ERP</b><span>Owner · role</span></div>
+        <ol>
+          <li><b>A dedicated read-only user</b> for Talonic, limited to the data above.</li>
+          <li><b>API credentials</b> for that user, shared through a secure link, never in plain email.</li>
+        </ol>
+        <p class="acc-n">Our connector only reads. No install and no change to your setup.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <!-- FILL: each person from the call, their role and a realistic time. Total in the top right. -->
+    <div class="hdr"><h2>Your team's effort</h2><span class="budget">About one hour in total</span></div>
+    <div class="cells">
+      <div class="cell"><span class="r">ERP admin · 15 min</span><b>Name</b><p>A scoped, read-only user and credentials</p></div>
+      <div class="cell"><span class="r">Legal · 15 min</span><b>Name</b><p>Approve access and data retention</p></div>
+      <div class="cell"><span class="r">Order-to-cash · 20 min</span><b>Name</b><p>Confirm billing rules, then sanity-check findings</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The pilot succeeds when</h2>
+    <ul class="checks">
+      <li>Data coverage is reported, with every missing document listed</li>
+      <li>Every high-confidence finding carries its source evidence</li>
+      <li>Findings are split into recoverable revenue, billing corrections and control gaps</li>
+      <li>Your team spends no more than about an hour supporting it</li>
+      <li>No production record is changed</li>
+      <li>You control export, continuation and deletion</li>
+    </ul>
+  </section>
+
+  <!-- Fixed proof footer: keep as is. FILL only the sender's email. -->
+  <footer class="proof">
+    <div class="din"><img src="/logos/din-mark.svg" alt="DIN"><span class="v">DIN SPEC 91491</span><span class="vl">Lead author of <b>the first national standard for AI data structuring.</b></span></div>
+    <div class="logos">
+      <img src="/logos/bosch-rexroth.svg" alt="Bosch Rexroth" style="height:24px">
+      <img src="/logos/maruti-suzuki.svg" alt="Maruti Suzuki" style="height:22px">
+      <img src="/logos/bridgeway.svg" alt="Bridgeway" style="height:22px">
+      <img src="/logos/getec.svg" alt="GETEC" style="height:25px">
+      <img src="/logos/wzb.svg" alt="WZB" style="height:21px">
+      <img src="/logos/phoenix.svg" alt="PHOENIX group" style="height:27px">
+    </div>
+    <div class="foot"><a href="mailto:name@talonic.ai">name@talonic.ai</a><a class="site" href="https://talonic.com" target="_blank" rel="noopener">talonic.com</a></div>
+  </footer>
+
+</main>
+</body>
+</html>

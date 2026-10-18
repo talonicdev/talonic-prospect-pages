@@ -1,0 +1,14 @@
+{
+  "name": "talonic",
+  "description": "Talonic's Claude Code plugins",
+  "owner": {
+    "name": "Talonic"
+  },
+  "plugins": [
+    {
+      "name": "talonic-prospect-pages",
+      "source": "./plugins/talonic-prospect-pages",
+      "description": "Turn a prospect call transcript into a private page at talonic.com/<customer>, with a voiced video and a PDF, published without the website repo."
+    }
+  ]
+}
