@@ -7,16 +7,16 @@
   "title": { "customer": "Acme Benelux", "subtitle": "Money Found pilot" },
   "label": "Sample contracts · fictional parties",
   "scenes": [
-    { "id": "read", "eyebrow": "01 · Read", "headline": "Every service contract, read.", "accent": "Each term tied to its clause.",
+    { "id": "read", "eyebrow": "Read", "headline": "Every service contract, read.", "accent": "Each term tied to its clause.",
       "screen": "contract-read", "highlight": ["rate-clause"],
       "voice": "Talonic reads every service contract. Rates, indexation, notice, expenses: each tied to its clause." },
-    { "id": "reg", "eyebrow": "02 · Aggregate", "headline": "One register for all contracts.", "accent": "Every deadline in view.",
+    { "id": "reg", "eyebrow": "Aggregate", "headline": "One register for all contracts.", "accent": "Every deadline in view.",
       "screen": "contract-register", "highlight": ["row"],
       "voice": "All of it lands in one register, with every deadline in view." },
-    { "id": "miss", "eyebrow": "04 · Fill the gaps", "headline": "Amendments we can't find become", "accent": "a to-do list.",
+    { "id": "miss", "eyebrow": "Fill the gaps", "headline": "Amendments we can't find become", "accent": "a to-do list.",
       "card": { "title": "Missing documents", "rows": ["Amendment 2 · referenced in clause 4.1 · not on file", "Extension 2024 · referenced in invoice note · not on file"] },
       "voice": "Amendments that are referenced but not on file become a list you can fill in later." },
-    { "id": "plan", "type": "timeline", "eyebrow": "06 · The plan", "headline": "Findings", "accent": "before mid-November.",
+    { "id": "plan", "type": "timeline", "eyebrow": "The plan", "headline": "Findings", "accent": "before mid-November.",
       "steps": [ { "when": "This week", "what": "Connectors built", "who": "By Talonic" }, { "when": "Fri 23 Oct", "what": "Alignment", "who": "Susanne, Ruud, Tiffany", "key": true } ],
       "voice": "Connectors this week. Alignment on the twenty-third. Then access, one audit week, and findings before mid-November." }
   ],
@@ -26,6 +26,7 @@
 
 Rules:
 
+- **Eyebrows are one word, no number.** The service prefixes the scene number itself (`01 · Read`); a number in the eyebrow shows twice.
 - **Screens come from the library.** `prospect screens` lists ids, what each shows and its highlight box ids. They are real platform screens of fictional sample contracts; keep the `label` so the viewer knows.
 - **Cards are for things the screens cannot show** (a missing-documents list, the agents' hunt list). The service marks them "Illustrative example". Rows must come from the brief, not from imagination.
 - **Voice lines are the brief in spoken English.** Numbers as words ("the twenty-third"). No claims that are not on the page.
