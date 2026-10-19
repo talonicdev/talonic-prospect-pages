@@ -33,13 +33,14 @@
 // overrides the API base (local harness: http://localhost:8797/api/prospects);
 // TALONIC_RENDER_API overrides the render service (default
 // https://prospect-render-production.up.railway.app, set with `prospect login --render-api`).
+import { fileURLToPath } from 'node:url'
 import { spawnSync } from 'node:child_process'
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync, readdirSync, statSync } from 'node:fs'
 import { homedir, platform, tmpdir } from 'node:os'
 import { basename, dirname, extname, resolve } from 'node:path'
 
 const CONFIG = resolve(homedir(), '.config/talonic/prospect.json')
-const SELF = resolve(new URL('.', import.meta.url).pathname)
+const SELF = fileURLToPath(new URL('.', import.meta.url)) // not .pathname: it keeps %20 for paths with spaces
 const TYPES = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.gif': 'image/gif', '.mp4': 'video/mp4', '.webm': 'video/webm', '.pdf': 'application/pdf', '.woff2': 'font/woff2' }
 
 const fail = (msg) => {
